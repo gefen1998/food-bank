@@ -5,9 +5,10 @@ food-bank-complete ♥
 * solve code SERACH BY INGREDIENT
 * fix bug YOUTUBE videos - not showing.
 <hr>
-## EXTRA TODO
+
+# EXTRA TODO
 * add COMMENTS to searches
 * signup service + USERS!
 * PHP sending Emails - FOODBANK mail
 * TOP PICKS - showing actual recipes from our API calls
-* BLOG - add posts / remove / comments
+* BLOG - add posts / remove / comments.
