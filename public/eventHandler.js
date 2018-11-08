@@ -11,7 +11,7 @@ class EventsHandler {
             //finds all the checkboxes
             let dieats = [$('#veganCreate'), $('#vegetarianCreate'), $('#high-proteinCreate'), $('#low-sugarCreate')];
             let alergies = [$('#gluten-freeCreate'), $('#dairy-freeCreate'), $('#peanutsCreate'), $('#treenutsCreate')];
-            
+
             let directions = $('#directionsCreate').val();
             let directionsArr = directions.match(/\S.*?(?![^.!?]).!??/g);
 
@@ -53,6 +53,50 @@ class EventsHandler {
         })
     }
 
+//     getrecipesByIngrediants() {
+//         $(".Get-recipes-By-Ing").on('click', ()=>{
+// //filter Api
+
+//         //first we take the q input! which is the recipe name:
+//         let q = ""
+//         //get ingredients from client
+//         let ingredients = $(".ingredients-input-search").val()
+//         let ingredientsArr = ingredients.split(',');
+//         if (ingredientsArr[0].length > 2) {
+//             for (let ingredient of ingredientsArr) {
+//                 q += " " + ingredient
+//             }
+//         }
+
+
+
+//         let url = "https://api.edamam.com/search?app_id=85758adc&app_key=3e6db936f012aeb14bbf9d31f821edbc&q=" + q
+
+//         let health = [$('#tree-nut-checkbox-search-by-ign'), $('#peanuts-checkbox-search-by-ign'),
+//         $('#vegan-checkbox-search-by-ign'), $('#vegetarian-checkbox-search-by-ign'),
+//         $('#sugar-conscious-checkbox-search-by-ign')]
+
+//         for (let i of health) {
+//             if (i.is(':checked')) {
+//                 url += "&health=" + i.val()
+//             }
+//         }
+
+//         if ($('#high-protein-checkbox-search-by-ign').is(':checked')) {
+//             url += "&diet=high-protein"
+//         }
+
+//         url += "&from=0&to=10"
+//         this.recipesApiRepository.getRecipesApi(url).then((recipes) => {
+//             this.renderer.renderRecipesFromApi(recipes)
+//         }).fail(() => console.log("didnt get from api or the function didnt work"))
+
+
+//         })
+        
+//     }
+
+
     ToggleIngredients() {
         $(".add-ingredients").on('click', (event) => {
             $(".toggle-ingredients-input").toggleClass('show');
@@ -68,12 +112,12 @@ class EventsHandler {
             //get ingredients from client
             let ingredients = $(".toggle-ingredients-input").val()
             let ingredientsArr = ingredients.split(',');
-            if (ingredientsArr[0].length>2){
-                for (let ingredient of ingredientsArr){
-                    q+=" "+ingredient
+            if (ingredientsArr[0].length > 2) {
+                for (let ingredient of ingredientsArr) {
+                    q += " " + ingredient
                 }
             }
-            
+
 
 
             let url = "https://api.edamam.com/search?app_id=85758adc&app_key=3e6db936f012aeb14bbf9d31f821edbc&q=" + q
@@ -150,10 +194,10 @@ class EventsHandler {
 
             // חפשי במרכיבים אם יש משהו שמכיל את מה שצריך
             this.recipesApiRepository.getRecipesApi(url).then((recipes) => {
-                    this.renderer.renderRecipesFromApi(recipes)
+                this.renderer.renderRecipesFromApi(recipes)
             }).fail(() => console.log("didnt get from api or the function didnt work"))
             this.recipesRepository.getFilteredRecipesByName(recName, stringAlergans, stringDiet).then((recipes) => { this.renderer.renderRecipesfromDb(recipes) }).fail(() => console.log("didnt get from api")).fail(() => console.log("didnt get from database"))
-        console.log(url)
+            console.log(url)
         })
     }
 
@@ -213,18 +257,18 @@ class EventsHandler {
         $('#recipe').on('click', '.removeRecipe', (event) => {
             let recipeId = $(event.currentTarget).closest('.currentRecipe').data().id
 
-            this.recipesRepository.removeRecipe(recipeId).then((data)=>{
+            this.recipesRepository.removeRecipe(recipeId).then((data) => {
                 this.renderer.$recipe.empty()
             })
         })
     }
 
-    handleRemovecomment(){
+    handleRemovecomment() {
         $('#recipe').on('click', '.removeComment', (event) => {
             let recipeId = $(event.currentTarget).closest('.currentRecipe').data().id
             let commentId = $(event.currentTarget).closest('.commentsContent').data().id
 
-            this.recipesRepository.removeComment(recipeId, commentId).then(()=>{
+            this.recipesRepository.removeComment(recipeId, commentId).then(() => {
                 this.renderer.renderRecipe(this.recipesRepository.currentRecipe)
             })
         })

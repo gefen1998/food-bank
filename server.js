@@ -6,9 +6,9 @@ const app = express();
 const recipeApi = require('./routes/recipeApi.js')
 const commentApi = require('./routes/commentApi.js')
 
-const SERVER_PORT = 8080;
+app.listen(process.env.PORT || '8080');
 
-mongoose.connect('mongodb://localhost/foodMoodDB', function() {
+mongoose.connect(process.env.CONNECTION_STRING|| 'mongodb://localhost/foodMoodDB', function() {
   console.log("DB connection established!!!");
 })
 

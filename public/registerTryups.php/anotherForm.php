@@ -1,5 +1,11 @@
 php_check_syntax
 
+<!-- // Hi there! these two php files are some try-ups codes I wrote for the registration part ("join us")  -->
+<!-- // if any of you succeed to make it ACRUALLY work, i'll eb really happy.
+of course you shall install PHP to work this code up!! INSTALLATION DOWN BELOW
+https://secure.php.net/manual/en/function.mail.php 
+https://secure.php.net/downloads.php-->
+
 <?php
 //if "email" variable is filled out, send email
   if (isset($_REQUEST['email']))  {

@@ -1,10 +1,14 @@
-/*!
- * Bootstrap v3.3.1 (http://getbootstrap.com)
- * Copyright 2011-2014 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
 
-/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/*!
+* Bootstrap v3.3.1 (http://getbootstrap.com)
+* Copyright 2011-2014 Twitter, Inc.
+* Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+*/
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize ==============================================*/
+
+/* =================== This is a CSS file which I actually used to edit some stuff. It's mostly a part of the template!
+don't change it a lot =========================================== */
+
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -2353,12 +2357,18 @@ output {
   line-height: 1.42857143;
   color: #555;
 }
+
+#mailing {
+height: 300px;
+width: 100px;
+}
+
 .form-control {
   display: block;
   width: 100%;
-  height: 34px;
+  height: 100px;
   padding: 6px 12px;
-  font-size: 14px;
+  font-size: 10px;
   line-height: 1.42857143;
   color: #555;
   background-color: #fff;
@@ -5450,6 +5460,28 @@ a.list-group-item-danger.active:focus {
   filter: alpha(opacity=20);
   opacity: .2;
 }
+
+/* handlebars */
+
+.currentRecipe {
+  font-size: 20px;
+  font-weight: 400;
+  color: rgb(9, 9, 49)
+}
+
+#recipes-template p {
+  font-size: 19px;
+  color: #05021f;
+  font-weight: 400;
+}
+
+#recipesApi-template p {
+  font-size: 19px;
+  color: #05021f;
+  font-weight: 400;
+}
+
+
 .close:hover,
 .close:focus {
   color: #000;

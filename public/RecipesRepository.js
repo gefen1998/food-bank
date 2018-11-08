@@ -57,7 +57,7 @@ class RecipesRepository {
         });         
     }
 
-    //these 2 functions are only for whene some one creates a recipe.
+    //these 2 functions are only for when some one creates a recipe.
     addIng(newIng) {
         this.ingredients.push(newIng)
     }
@@ -69,7 +69,7 @@ class RecipesRepository {
             }
         }
     }
-    //when the recipe is complite and added to the data base the ingredients will be removed
+    //when the recipe is complete and added to the data base the ingredients will be removed
     removeAllIng() {
         this.ingredients = [];
     }

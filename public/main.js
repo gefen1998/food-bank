@@ -19,5 +19,6 @@ eventsHandler.addRecipe();
 eventsHandler.sendCriterias()
 eventsHandler.addIngWhileCreatingRecipe()
 eventsHandler.removeIngWhileCreatingRecipe()
+eventsHandler.getrecipesByIngrediants()
 // eventsHandler.getRecipies()
 

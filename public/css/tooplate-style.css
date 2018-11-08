@@ -1,10 +1,11 @@
 /*
+Template 2089 Meteor- http://www.tooplate.com/view/2089-meteor
+===============================================================*/
 
-Template 2089 Meteor
+/* ================  This is a CSS file which I actually used to edit some stuff. It's mostly a part of the template!
+don't change it a lot  ==================================================================================
+most of the styling and CSS work was done here!*/ 
 
-http://www.tooplate.com/view/2089-meteor
-
-*/
 
 * {
     margin: 0;
@@ -135,6 +136,9 @@ p {
     -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
 }
+
+/* ====================================navbar white and black logo - didn't work out
+POSSIBLE FIX - include the logo as part of the background (slides) pics ================================ */
 
 /* .navbar-brand .logo{
 	margin-top: 22px;
@@ -675,9 +679,9 @@ input[type=text]:focus, input[type=password]:focus {
 /* SEARCHES */
 
 #yourSearches {
-	background-image: url(../img/blog-bg.png);
-	background-repeat: no-repeat;
-	background-size: cover;
+	background-image: url(../img/portfolio/searchesbig.jpeg);
+	background-repeat: repeat;
+	background-size: auto;
 	width: 100%;
 }
 
@@ -686,10 +690,38 @@ input[type=text]:focus, input[type=password]:focus {
 }
 
 #yourSearches .section-heading h4 {
-	color: rgb(0, 0, 0);
+	color: rgb(106, 169, 172);
 }
 
+#yourSearches .section-heading .line-dec {
+	color: rgb(106, 169, 172);
+}
 
+/* seach recipe by name */
+
+#recipes-template #recipesApi-template {
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: darkgrey;
+	text-align: center;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	color: rgb(5, 5, 5);
+	font-size: 14px;
+}
+
+#recipesApi-template .row {
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: darkgrey;
+	text-align: center;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	color: rgb(5, 5, 5);
+	font-size: 14px;
+}
 
 /* BLOG */
 
