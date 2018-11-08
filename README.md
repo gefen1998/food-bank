@@ -1,12 +1,12 @@
-## food-bank-complete ♥
-# TODO
+# food-bank-complete ♥
+## TODO
 * some code missing in this version - update this repo!!
 * continue fixing YOUR SEARCHES services
 * solve code SERACH BY INGREDIENT
 * fix bug YOUTUBE videos - not showing.
 <hr>
 
-# EXTRA TODO
+## EXTRA TODO
 * add COMMENTS to searches
 * signup service + USERS!
 * PHP sending Emails - FOODBANK mail
